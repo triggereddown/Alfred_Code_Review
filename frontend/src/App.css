@@ -3,6 +3,8 @@ body,
 #root {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -11,34 +13,49 @@ main {
   display: flex;
   padding: 2.5rem;
   gap: 1rem;
+  box-sizing: border-box;
 }
 
+/* Equal width halves */
 main .left,
-main.right {
+main .right {
+  flex: 1;
   height: 100%;
-  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  overflow: hidden; /* Prevent outer overflow */
 }
 
+/* Left section styles */
 main .left {
   background-color: black;
   position: relative;
+}
+
+/* Code input area */
+.left .codeInput {
+  flex: 1; /* Fill remaining height */
+  overflow-y: auto; /* Show vertical scrollbar if needed */
+  padding: 1rem;
+  background-color: #1e1e1e;
   border-radius: 0.75rem;
 }
 
-.left {
-  border-radius: 0.75rem;
-}
-
-.left .code,
-.code pre,
-.code pre code {
-  height: 100%;
-  width: 100%;
+/* Prism styles */
+.codeInput pre {
   margin: 0;
-  border-radius: 0.75rem;
-  background-color: black;
+  background-color: transparent;
+  min-height: 100%;
+  white-space: pre-wrap; /* Optional: wrap long lines */
 }
 
+.codeInput pre code {
+  display: block;
+  background-color: transparent;
+}
+
+/* Submit button */
 main .left .submitButton {
   position: absolute;
   bottom: 1rem;
@@ -46,6 +63,7 @@ main .left .submitButton {
   cursor: pointer;
 }
 
+/* Optional button style */
 .btn-btn-primary {
   background-color: rgb(234, 157, 42);
   color: rgb(255, 255, 255);
@@ -55,9 +73,10 @@ main .left .submitButton {
   cursor: pointer;
 }
 
-main.right {
-  background-color: #f0f0f0;
-  border-color: rgb(10, 132, 239);
-  border-width: 0.1rem;
-  border-style: solid;
+/* Right section styles */
+main .right {
+  background-color: #131212;
+  border: 1px solid rgb(10, 132, 239);
+  overflow: auto;
+  padding: 1rem;
 }
