@@ -26,7 +26,7 @@ function App() {
 
   // sending the request through post async and then wait until it's done
   async function reviewCode() {
-    const response = await axios.post("http://localhost:3000/ai/get-review ", {
+    const response = await axios.post("https://alfred-code-review-backend.onrender.com/ai/get-review ", {
       code,
     });
     // State variable to store the review
