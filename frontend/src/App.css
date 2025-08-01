@@ -1,0 +1,54 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 2.5rem;
+  gap: 1rem;
+}
+
+main .left,
+main.right {
+  height: 100%;
+  flex-basis: 50%;
+}
+
+main .left {
+  background-color: black;
+  position: relative;
+  border-radius: 0.75rem;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.75rem;
+  background-color: black;
+}
+
+main .left .submitButton {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: white;
+  color: black;
+  border-radius: 0.7rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+main.right {
+  background-color: #f0f0f0;
+  border-color: rgb(10, 132, 239);
+  border-width: 0.1rem;
+  border-style: solid;
+}
