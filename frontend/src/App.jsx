@@ -3,6 +3,7 @@ import Prism from "prismjs"; // ✅ Import Prism
 import "prismjs/themes/prism-tomorrow.css";
 import "./App.css";
 import Editor from "react-simple-code-editor";
+import axios from "axios";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,14 @@ function App() {
   const codeSnippet = `function sum() {
   return 1 + 1;
 }`;
+
+  // sending the request through post async and then wait until it's done
+  async function reviewCode() {
+    const response = await axios.post("http://localhost:3000/ai/get-review ", {
+      code,
+    });
+    console.log(response.data);
+  }
 
   return (
     <>
@@ -37,8 +46,10 @@ function App() {
               }}
             />
           </div>
-          <div className="submitButton">
-            <button>Submit</button>
+          <div className="submitButton" onClick={reviewCode}>
+            <button className="btn-btn-primary" onClick={reviewCode}>
+              Submit
+            </button>
           </div>
         </div>
         <div className="right"></div>

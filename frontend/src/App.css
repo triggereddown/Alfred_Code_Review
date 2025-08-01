@@ -25,6 +25,10 @@ main .left {
   border-radius: 0.75rem;
 }
 
+.left {
+  border-radius: 0.75rem;
+}
+
 .left .code,
 .code pre,
 .code pre code {
@@ -39,10 +43,15 @@ main .left .submitButton {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  background-color: white;
-  color: black;
-  border-radius: 0.7rem;
-  padding: 2rem;
+  cursor: pointer;
+}
+
+.btn-btn-primary {
+  background-color: rgb(234, 157, 42);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
   cursor: pointer;
 }
 
