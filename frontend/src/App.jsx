@@ -36,6 +36,9 @@ function App() {
 
   return (
     <>
+      <div className="header">
+        <h1>Code Review Tool</h1>
+      </div>
       <main>
         <div className="left">
           <div className="codeInput">

@@ -80,3 +80,10 @@ main .right {
   overflow: auto;
   padding: 1rem;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers content horizontally inside header */
+  /* full screen height */
+}
